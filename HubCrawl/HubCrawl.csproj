@@ -34,8 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.0.13.1.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.0.13.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -47,6 +54,16 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAutoGrid">
+      <HintPath>..\packages\WpfAutoGrid.1.2.0.0\lib\net45\WpfAutoGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Yuhan.Common">
+      <HintPath>..\packages\Yuhan.Common.1.5.3\lib\Yuhan.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yuhan.WPF">
+      <HintPath>..\packages\Yuhan.WPF.1.4.0.0\lib\Yuhan.WPF.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -84,6 +101,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,6 +119,23 @@
     <Folder Include="Resources\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HubCrawl.Core\HubCrawl.Core.csproj">
+      <Project>{5d55840a-cacf-42da-90d7-c750a1a399e8}</Project>
+      <Name>HubCrawl.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HubCrawl.Interface\HubCrawl.Interface.csproj">
+      <Project>{436e4969-89c3-4d69-8eda-3086a9565704}</Project>
+      <Name>HubCrawl.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HubCrawl.WPF\HubCrawl.WPF.csproj">
+      <Project>{749c7781-86e5-498c-90d9-433a0abe79f0}</Project>
+      <Name>HubCrawl.WPF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

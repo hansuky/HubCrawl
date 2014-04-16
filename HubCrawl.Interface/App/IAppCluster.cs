@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HubCrawl.Core
+namespace HubCrawl.Interface.App
 {
-    public class Class1
-    {
-    }
+    public interface IAppCluster { }
 }

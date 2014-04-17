@@ -29,6 +29,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HubCrawl.PlugIns", "HubCraw
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HubCrawl.Apps", "HubCrawl.Apps", "{8658D689-AD1C-45ED-925F-D44B71761A54}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{528A2E3A-F4C4-4D2A-ABC4-867EE9007F85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UML", "UML", "{9253476A-4DBD-454B-8361-EFEA115581F6}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\HubCrawl.uml = Documents\HubCrawl.uml
+		Documents\HubCrawl.~ml = Documents\HubCrawl.~ml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,5 +91,6 @@ Global
 		{57264C0B-F153-48FB-93D5-9D966C1740F4} = {409F79CE-DF8D-45F4-9FBC-F45325EBC1CB}
 		{83A3774E-FF7A-4C69-BDB3-08749BA186C2} = {409F79CE-DF8D-45F4-9FBC-F45325EBC1CB}
 		{EBAB9E23-1276-4007-B96C-318D5F5FEAC5} = {409F79CE-DF8D-45F4-9FBC-F45325EBC1CB}
+		{9253476A-4DBD-454B-8361-EFEA115581F6} = {528A2E3A-F4C4-4D2A-ABC4-867EE9007F85}
 	EndGlobalSection
 EndGlobal

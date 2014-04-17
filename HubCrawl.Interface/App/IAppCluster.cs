@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace HubCrawl.Interface.App
 {
-    public interface IAppCluster { }
+    public interface IAppCluster
+    {
+        
+    }
 }

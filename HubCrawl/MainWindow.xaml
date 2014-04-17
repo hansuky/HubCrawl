@@ -1,8 +1,15 @@
-﻿<Window x:Class="HubCrawl.MainWindow"
+﻿<metro:MetroWindow x:Class="HubCrawl.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid x:Name="LayoutRoot">
-        
-    </Grid>
-</Window>
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="HubCrwal" 
+            MinWidth="800" MinHeight="600" 
+            Width="800" Height="600" 
+            GlowBrush="{DynamicResource AccentColorBrush}">
+    <metro:TransitioningContentControl x:Name="LayoutRoot">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <metro:ProgressRing IsActive="True"/>
+            <TextBlock Text="Hub Crawl" FontSize="48" FontWeight="Bold"/>
+        </StackPanel>
+    </metro:TransitioningContentControl>
+</metro:MetroWindow>

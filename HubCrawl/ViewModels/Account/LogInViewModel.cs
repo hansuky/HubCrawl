@@ -39,6 +39,15 @@ namespace HubCrawl.ViewModels.Account
             }
         }
 
+        private Boolean _AutoLogIn;
+
+        public Boolean AutoLogIn
+        {
+            get { return _AutoLogIn; }
+            set { ChangedPropertyChanged<Boolean>("AutoLogIn", ref _AutoLogIn, ref value); }
+        }
+
+
         private ICommand _LogInCommand;
 
         public ICommand LogInCommand
@@ -59,6 +68,8 @@ namespace HubCrawl.ViewModels.Account
                 return true;
             return false;
         }
-        public void LogIn() { }
+        public void LogIn()
+        { //this.Error = "계정 또는 비밀번호를 잘못 입력하였습니다. 다시한번 확인해주세요."; 
+        }
     }
 }

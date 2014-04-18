@@ -79,24 +79,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\ConsoleControl.xaml.cs">
+      <DependentUpon>ConsoleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\NavigationService.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account\LogInResult.cs" />
     <Compile Include="ViewModels\HubCrawlViewModel.cs" />
     <Compile Include="ViewModels\Account\LogInViewModel.cs" />
     <Compile Include="Views\Account\LogInView.xaml.cs">
       <DependentUpon>LogInView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Views\HubCrawlView.xaml.cs">
+      <DependentUpon>HubCrawlView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\InitializationView.xaml.cs">
+      <DependentUpon>InitializationView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\ConsoleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Account\LogInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HubCrawlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InitializationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,10 +152,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
+    <Folder Include="Addons\" />
+    <Folder Include="Apps\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Modules\" />
+    <Folder Include="PlugIns\" />
     <Folder Include="Repositories\" />
     <Folder Include="Resources\" />
     <Folder Include="Securities\" />
@@ -142,6 +165,14 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HubCrawl.Browser\HubCrawl.Browser.csproj">
+      <Project>{1dd97200-c12b-4644-b1f2-34718de1da0a}</Project>
+      <Name>HubCrawl.Browser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HubCrawl.Console\HubCrawl.Console.csproj">
+      <Project>{dfc4fe54-006f-482e-80af-874dfe7d9852}</Project>
+      <Name>HubCrawl.Console</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HubCrawl.Core\HubCrawl.Core.csproj">
       <Project>{5d55840a-cacf-42da-90d7-c750a1a399e8}</Project>
       <Name>HubCrawl.Core</Name>
@@ -149,6 +180,10 @@
     <ProjectReference Include="..\HubCrawl.Interface\HubCrawl.Interface.csproj">
       <Project>{436e4969-89c3-4d69-8eda-3086a9565704}</Project>
       <Name>HubCrawl.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HubCrawl.Winform\HubCrawl.Winform.csproj">
+      <Project>{b09b702f-e9b0-4148-956d-c0ffb741e81d}</Project>
+      <Name>HubCrawl.Winform</Name>
     </ProjectReference>
     <ProjectReference Include="..\HubCrawl.WPF\HubCrawl.WPF.csproj">
       <Project>{749c7781-86e5-498c-90d9-433a0abe79f0}</Project>

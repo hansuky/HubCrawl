@@ -13,16 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication
+namespace HubCrawl.Views
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// HubCrawlView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HubCrawlView : UserControl
     {
-        public MainWindow()
+        public HubCrawlView()
         {
             InitializeComponent();
+            HubCrawl.Helpers.NavigationService.Navigate(new Controls.ConsoleControl());
         }
     }
 }

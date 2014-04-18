@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HubCrawl.Interface.App
+namespace HubCrawl.Models.Account
 {
-    public interface IAppCluster<T>
+    public class LogInResult
     {
-        AppType AppType { get; }
-        T App { get; }
     }
 }

@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="350" >
             <TextBlock Text="로그인" FontSize="35"  Margin="5, 25"/>
-            <TextBlock Text="계정 또는 비밀번호를 잘못 입력하였습니다. 다시한번 확인해주세요." Foreground="#FFC72D2D" />
+            <TextBlock Text="{Binding Path=Error, Mode=OneWay}" Foreground="#FFC72D2D" />
             <StackPanel Margin="5, 15">
                 <TextBlock Text="HubCrawl 계정" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding Path=UserID, Mode=TwoWay, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"/>
@@ -35,9 +35,13 @@
             <TextBlock Text="@2014 Yuhan" HorizontalAlignment="Center" Foreground="Gray" Margin="15"/>
         </StackPanel>
         <Grid Grid.Row="1" Margin="15, 3">
-            <TextBlock Text="로그인 하지 않고 계속" VerticalAlignment="Center"/>
+            <TextBlock VerticalAlignment="Center" >
+                <Hyperlink Click="Skip_LogIn_Request">
+                    로그인 하지 않고 계속
+                </Hyperlink>
+            </TextBlock>
             <DockPanel HorizontalAlignment="Right">
-                <CheckBox Content="HubCrawl 실행시 자동 로그인하기"/>
+                <CheckBox IsChecked="{Binding Path=AutoLogIn, Mode=TwoWay}" Content="HubCrawl 실행시 자동 로그인하기"/>
             </DockPanel>
         </Grid>
     </Grid>

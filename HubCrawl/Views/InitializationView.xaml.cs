@@ -13,27 +13,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HubCrawl.Views.Account
+namespace HubCrawl.Views
 {
     /// <summary>
-    /// LoginView.xaml에 대한 상호 작용 논리
+    /// InitializationView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class LogInView : UserControl
+    public partial class InitializationView : UserControl
     {
-        public LogInView()
+        public InitializationView()
         {
             InitializeComponent();
-        }
-        
-        private void Skip_LogIn_Request(object sender, RoutedEventArgs e)
-        {
-            OnSkip();
+            this.Loaded += InitializationView_Loaded;
         }
 
-        protected void OnSkip()
+        void InitializationView_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Skip != null) Skip(this, null);
+            OnHubCrawlInitialized();
         }
-        public event EventHandler Skip;
+
+        protected void OnHubCrawlInitialized()
+        {
+            if (HubCrawlInitialized != null) HubCrawlInitialized(this, null);
+        }
+
+        public event EventHandler HubCrawlInitialized;
     }
 }

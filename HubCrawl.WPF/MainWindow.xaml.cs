@@ -13,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HubCrawl.Views.Account
+namespace HubCrawl.WPF
 {
     /// <summary>
-    /// LoginView.xaml에 대한 상호 작용 논리
+    /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class LogInView : UserControl
+    public partial class MainWindow : Window
     {
-        public LogInView()
+        public MainWindow()
         {
             InitializeComponent();
         }
-        
-        private void Skip_LogIn_Request(object sender, RoutedEventArgs e)
-        {
-            OnSkip();
-        }
-
-        protected void OnSkip()
-        {
-            if (Skip != null) Skip(this, null);
-        }
-        public event EventHandler Skip;
     }
 }

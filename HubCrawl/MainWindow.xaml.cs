@@ -1,5 +1,7 @@
 ﻿using HubCrawl.Helpers;
 using HubCrawl.Interface.App;
+using HubCrawl.Models.Apps;
+using HubCrawl.Views;
 using HubCrawl.WPF;
 using MahApps.Metro.Controls;
 using System;
@@ -18,6 +20,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace HubCrawl
 {
@@ -29,11 +32,19 @@ namespace HubCrawl
         public MainWindow()
         {
             InitializeComponent();
+            SetView(new HubCrawlView());
+            //var logInView = new HubCrawl.Views.Account.LogInView();
+            //logInView.Skip += logInView_Skip;
+            //SetView(logInView);
+            //TestView();
+        }
 
+        void TestView()
+        {
             //Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\WpfApplication.dll");
-            //Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.dll");
-            Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\BrowserApplication\bin\Debug\BrowserApplication.dll");
-            
+            Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.dll");
+            //Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\BrowserApplication\bin\Debug\BrowserApplication.dll");
+
             foreach (Type t in ass.GetExportedTypes())
             {
                 //t.GetInterfaceMap(typeof(HubCrawl.WPF.AppCluster
@@ -59,9 +70,6 @@ namespace HubCrawl
                     SetView(cluster.App, AppType.Browser);
                 }
             }
-            //var logInView = new HubCrawl.Views.Account.LogInView();
-            //logInView.Skip += logInView_Skip;
-            //SetView(logInView);
         }
 
         void logInView_Skip(object sender, EventArgs e)

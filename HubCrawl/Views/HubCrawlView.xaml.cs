@@ -24,6 +24,8 @@ namespace HubCrawl.Views
         {
             InitializeComponent();
             HubCrawl.Helpers.NavigationService.Navigate(new Controls.ConsoleControl());
+            var samplePViewModel = new HubCrawl.ViewModels.Sample.MainWindowViewModel(new HubCrawl.Services.MessageBoxService());
+            Panorama.ItemsSource = samplePViewModel.PanoramaItems;
         }
     }
 }

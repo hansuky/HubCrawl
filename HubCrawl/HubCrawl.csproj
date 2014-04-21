@@ -82,13 +82,39 @@
     <Compile Include="Controls\ConsoleControl.xaml.cs">
       <DependentUpon>ConsoleControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GridPanel.cs" />
+    <Compile Include="Controls\Panorama\IPanoramaTile.cs" />
+    <Compile Include="Controls\Panorama\Panorama.cs" />
+    <Compile Include="Controls\Panorama\PanoramaGroup.cs" />
+    <Compile Include="Converters\PanoramaGroupWidthConverter.cs" />
+    <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="Helpers\NavigationService.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Account\LogInResult.cs" />
+    <Compile Include="Models\Addons\HubCrawlAddon.cs" />
+    <Compile Include="Models\Apps\HubCrawlApp.cs" />
+    <Compile Include="Models\HubCrawlCluster.cs" />
+    <Compile Include="Models\Modules\HubCrawlModule.cs" />
+    <Compile Include="Models\MetroMenu.cs" />
+    <Compile Include="Models\MetroMenuItem.cs" />
+    <Compile Include="Models\MetroMenuResources.cs" />
+    <Compile Include="Models\PlugIns\HubCrawlPlugIn.cs" />
+    <Compile Include="Providers\AppProvider.cs" />
+    <Compile Include="Providers\HubCrawlInitializer.cs" />
+    <Compile Include="Providers\HubCrawlProvider.cs" />
+    <Compile Include="Providers\ModuleProvider.cs" />
+    <Compile Include="Providers\PlugInProvider.cs" />
+    <Compile Include="Providers\AddonProvider.cs" />
     <Compile Include="ViewModels\HubCrawlViewModel.cs" />
     <Compile Include="ViewModels\Account\LogInViewModel.cs" />
+    <Compile Include="ViewModels\Sample\MainWindowViewModel.cs" />
+    <Compile Include="Services\MessageBoxService.cs" />
+    <Compile Include="ViewModels\PanoramaTileViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Views\Account\LogInView.xaml.cs">
       <DependentUpon>LogInView.xaml</DependentUpon>
     </Compile>
@@ -107,6 +133,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\HubCrawl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Style\HubCrawl.Panorama.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Template\HubCrawl.ListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Template\HubCrawl.Panorama.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -158,8 +200,8 @@
     <Folder Include="Modules\" />
     <Folder Include="PlugIns\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Resources\" />
     <Folder Include="Securities\" />
+    <Folder Include="Services\App\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -192,6 +234,31 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Samples\Add.png" />
+    <Resource Include="Resources\Images\Samples\Adobe.png" />
+    <Resource Include="Resources\Images\Samples\Android.png" />
+    <Resource Include="Resources\Images\Samples\Author.png" />
+    <Resource Include="Resources\Images\Samples\Blogger.png" />
+    <Resource Include="Resources\Images\Samples\Copy.png" />
+    <Resource Include="Resources\Images\Samples\Delete.png" />
+    <Resource Include="Resources\Images\Samples\Digg.png" />
+    <Resource Include="Resources\Images\Samples\Edit.png" />
+    <Resource Include="Resources\Images\Samples\Facebook.png" />
+    <Resource Include="Resources\Images\Samples\GMail.png" />
+    <Resource Include="Resources\Images\Samples\RSS.png" />
+    <Resource Include="Resources\Images\Samples\Save.png" />
+    <Resource Include="Resources\Images\Samples\Search.png" />
+    <Resource Include="Resources\Images\Samples\Trash.png" />
+    <Resource Include="Resources\Images\Samples\Twitter.png" />
+    <Resource Include="Resources\Images\Samples\VisualStudio.png" />
+    <Resource Include="Resources\Images\Samples\Wordpress.png" />
+    <Resource Include="Resources\Images\Samples\Yahoo.png" />
+    <Resource Include="Resources\Images\Samples\YouTube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppDefault.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -142,7 +142,15 @@ namespace HubCrawl.Controls
 
         #endregion
 
+        public static readonly DependencyProperty PanoramaItemSelectorProperty =
+            DependencyProperty.Register("PanoramaItemSelector", typeof(DataTemplateSelector), typeof(Panorama),
+                new FrameworkPropertyMetadata(null));
 
+        public DataTemplateSelector PanoramaItemSelector
+        {
+            get { return (DataTemplateSelector)GetValue(PanoramaItemSelectorProperty); }
+            set { SetValue(PanoramaItemSelectorProperty, value); }
+        }
  
         #region HeaderFontColor
 

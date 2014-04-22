@@ -8,15 +8,6 @@
              xmlns:Controls="clr-namespace:HubCrawl.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Style/HubCrawl.Panorama.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.Panorama.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.ListBox.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -46,9 +37,14 @@
             </DockPanel>
             <DockPanel Grid.Column="1" Margin="15, 0">
                 <Grid DockPanel.Dock="Top">
-                    <TextBox Text="" DockPanel.Dock="Top" metro:TextboxHelper.Watermark="Filter Apps"/>
+                    <TextBox Text="" DockPanel.Dock="Top" metro:TextboxHelper.Watermark="Filter Apps" />
                 </Grid>
-                <Controls:Panorama x:Name="Panorama" DockPanel.Dock="Top"/>
+                <Grid>
+                    <Controls:AppPanorama ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>
+                    <!--<Controls:Panorama x:Name="PanoramaApps" 
+                                       DockPanel.Dock="Top" ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>-->
+                    <!--<Controls:Panorama x:Name="Panorama" DockPanel.Dock="Top" Grid.Row="1"/>-->
+                </Grid>
             </DockPanel>
         </Grid>
         <Grid Grid.Row="2" Margin="8">

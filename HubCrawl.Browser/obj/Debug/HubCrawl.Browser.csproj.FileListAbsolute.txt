@@ -1,0 +1,7 @@
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\bin\Debug\HubCrawl.Browser.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\bin\Debug\HubCrawl.Browser.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\bin\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\bin\Debug\HubCrawl.Interface.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\obj\Debug\HubCrawl.Browser.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\obj\Debug\HubCrawl.Browser.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Browser\obj\Debug\HubCrawl.Browser.pdb

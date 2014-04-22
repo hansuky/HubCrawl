@@ -1,0 +1,6 @@
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\bin\Debug\HubCrawl.Service.dll.config
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\bin\Debug\HubCrawl.Service.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\bin\Debug\HubCrawl.Service.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\obj\Debug\HubCrawl.Service.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\obj\Debug\HubCrawl.Service.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Service\obj\Debug\HubCrawl.Service.pdb

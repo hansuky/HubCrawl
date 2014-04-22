@@ -10,13 +10,13 @@ namespace HubCrawl.Providers
 {
     public class AddonProvider : HubCrawlProvider<HubCrawlAddon>
     {
-        private ObservableCollection<HubCrawlAddon> _Addons;
+        public static ObservableCollection<HubCrawlAddon> Addons;
         public override ObservableCollection<HubCrawlAddon> Cluster
         {
             get
             {
-                if (_Addons == null) _Addons = new ObservableCollection<HubCrawlAddon>();
-                return _Addons;
+                if (Addons == null) Addons = new ObservableCollection<HubCrawlAddon>();
+                return Addons;
             }
         }
 

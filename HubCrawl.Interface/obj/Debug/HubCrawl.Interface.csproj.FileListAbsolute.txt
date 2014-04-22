@@ -1,0 +1,4 @@
+D:\Projects\GitHub\HubCrawl\HubCrawl.Interface\bin\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Interface\bin\Debug\HubCrawl.Interface.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Interface\obj\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Interface\obj\Debug\HubCrawl.Interface.pdb

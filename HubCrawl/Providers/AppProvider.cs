@@ -12,15 +12,15 @@ namespace HubCrawl.Providers
 {
     public class AppProvider : HubCrawlProvider<HubCrawlApp>
     {
-        private static ObservableCollection<HubCrawlApp> _Apps;
+        public static ObservableCollection<HubCrawlApp> Apps { get; private set; }
         [XmlArray(ElementName = "HubCrawlApps")]
         [XmlArrayItem(ElementName = "HubCrawlApps")]
         public override ObservableCollection<HubCrawlApp> Cluster
         {
             get
             {
-                if (_Apps == null) _Apps = new ObservableCollection<HubCrawlApp>();
-                return _Apps;
+                if (Apps == null) Apps = new ObservableCollection<HubCrawlApp>();
+                return Apps;
             }
         }
 
@@ -36,16 +36,370 @@ namespace HubCrawl.Providers
 
         public AppProvider()
         {
-            Cluster.Add(new HubCrawlApp()
+            if (Cluster.Count == 0)
             {
-                Name = "WpfApplication",
-                ClusterDLLName = "WpfApplication.dll"
-            });
-            Cluster.Add(new HubCrawlApp()
-            {
-                Name = "WindowsFormsApplication",
-                ClusterDLLName = "WindowsFormsApplication.dll"
-            });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WpfApplication",
+                    ClusterDLLName = "WpfApplication.dll"
+                });
+                Cluster.Add(new HubCrawlApp()
+                {
+                    Name = "WindowsFormsApplication",
+                    ClusterDLLName = "WindowsFormsApplication.dll"
+                });
+
+            }
         }
     }
 }

@@ -38,6 +38,31 @@ namespace HubCrawl.Models.Apps
             set { ChangedPropertyChanged<String>("IconPath", ref _IconPath, ref value); }
         }
 
+        private String _Group;
+        /// <summary>
+        /// Application Group Name
+        /// </summary>
+        public String Group
+        {
+            get { return _Group; }
+            set { ChangedPropertyChanged<String>("Group", ref _Group, ref value); }
+        }
+
+        private String _Title;
+        /// <summary>
+        /// Application Title
+        /// </summary>
+        public String Title
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(_Title)) _Title = Name;
+                return _Title;
+            }
+            set { ChangedPropertyChanged<String>("Title", ref _Title, ref value); }
+        }
+
+
         public HubCrawlApp() : base() { }
     }
 }

@@ -1,0 +1,15 @@
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\WpfApplication.pdb
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication_MarkupCompile.cache
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.g.resources
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.Properties.Resources.resources
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.csproj.GenerateResource.Cache
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.pdb
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\HubCrawl.Interface.pdb
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\WpfApplication.dll
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\HubCrawl.WPF.dll
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\HubCrawl.WPF.pdb
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\MainControl.baml
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\MainControl.g.cs
+D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.dll

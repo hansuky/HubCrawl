@@ -1,7 +1,9 @@
 ﻿using HubCrawl.Models;
+using HubCrawl.Models.Apps;
 using HubCrawl.Providers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,7 +33,25 @@ namespace HubCrawl.ViewModels
         public void Initialization()
         {
             HubCrawlInitializer.Initialize();
+            this.Apps = AppProvider.Apps;
         }
+
+        #region Apps
+
+        private ObservableCollection<HubCrawlApp> _Apps;
+
+        public ObservableCollection<HubCrawlApp> Apps
+        {
+            get
+            {
+                if (_Apps == null) _Apps = new ObservableCollection<HubCrawlApp>();
+                return _Apps;
+            }
+            set { ChangedPropertyChanged<ObservableCollection<HubCrawlApp>>("Apps", ref _Apps, ref value); }
+        }
+
+
+        #endregion
 
         public HubCrawlViewModel() { Initialization(); }
     }

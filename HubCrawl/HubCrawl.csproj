@@ -79,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\AppPanorama.xaml.cs">
+      <DependentUpon>AppPanorama.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ConsoleControl.xaml.cs">
       <DependentUpon>ConsoleControl.xaml</DependentUpon>
     </Compile>
@@ -86,6 +89,7 @@
     <Compile Include="Controls\Panorama\IPanoramaTile.cs" />
     <Compile Include="Controls\Panorama\Panorama.cs" />
     <Compile Include="Controls\Panorama\PanoramaGroup.cs" />
+    <Compile Include="Controls\Panorama\PanoramaTileType.cs" />
     <Compile Include="Converters\PanoramaGroupWidthConverter.cs" />
     <Compile Include="Commands\SimpleCommand.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
@@ -108,6 +112,7 @@
     <Compile Include="Providers\ModuleProvider.cs" />
     <Compile Include="Providers\PlugInProvider.cs" />
     <Compile Include="Providers\AddonProvider.cs" />
+    <Compile Include="Resources\Template\Selector\AppTileDataTemplateSelector.cs" />
     <Compile Include="ViewModels\HubCrawlViewModel.cs" />
     <Compile Include="ViewModels\Account\LogInViewModel.cs" />
     <Compile Include="ViewModels\Sample\MainWindowViewModel.cs" />
@@ -128,6 +133,10 @@
     <Compile Include="Views\InitializationView.xaml.cs">
       <DependentUpon>InitializationView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\AppPanorama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ConsoleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

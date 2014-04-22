@@ -23,6 +23,10 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Style/HubCrawl.Panorama.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.Panorama.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.ListBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

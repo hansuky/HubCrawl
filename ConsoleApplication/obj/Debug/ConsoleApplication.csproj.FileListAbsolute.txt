@@ -1,6 +1,5 @@
 D:\Projects\GitHub\HubCrawl\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
 D:\Projects\GitHub\HubCrawl\ConsoleApplication\bin\Debug\ConsoleApplication.exe
 D:\Projects\GitHub\HubCrawl\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
-D:\Projects\GitHub\HubCrawl\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\HubCrawl\ConsoleApplication\obj\Debug\ConsoleApplication.exe
 D:\Projects\GitHub\HubCrawl\ConsoleApplication\obj\Debug\ConsoleApplication.pdb

@@ -1,4 +1,5 @@
-﻿using HubCrawl.Providers;
+﻿using HubCrawl.Core;
+using HubCrawl.Core.Providers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using Yuhan.Common.Models;
 namespace HubCrawl.Models.PlugIns
 {
     [Serializable]
-    public class HubCrawlPlugIn : HubCrawlCluster
+    public class HubCrawlPlugIn : HubCrawl.Core.PlugIns.HubCrawlPlugIn
     {
         public override string FilePath
         {

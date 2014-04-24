@@ -82,6 +82,7 @@
     <Compile Include="Controls\AppPanorama.xaml.cs">
       <DependentUpon>AppPanorama.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AppPanoramaGroup.cs" />
     <Compile Include="Controls\ConsoleControl.xaml.cs">
       <DependentUpon>ConsoleControl.xaml</DependentUpon>
     </Compile>
@@ -89,9 +90,10 @@
     <Compile Include="Controls\Panorama\IPanoramaTile.cs" />
     <Compile Include="Controls\Panorama\Panorama.cs" />
     <Compile Include="Controls\Panorama\PanoramaGroup.cs" />
-    <Compile Include="Controls\Panorama\PanoramaTileType.cs" />
     <Compile Include="Converters\PanoramaGroupWidthConverter.cs" />
     <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Converters\StringToPathConverter.cs" />
+    <Compile Include="Events\HubCrawlClusterEventArgs.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="Helpers\NavigationService.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -100,18 +102,11 @@
     <Compile Include="Models\Account\LogInResult.cs" />
     <Compile Include="Models\Addons\HubCrawlAddon.cs" />
     <Compile Include="Models\Apps\HubCrawlApp.cs" />
-    <Compile Include="Models\HubCrawlCluster.cs" />
     <Compile Include="Models\Modules\HubCrawlModule.cs" />
     <Compile Include="Models\MetroMenu.cs" />
     <Compile Include="Models\MetroMenuItem.cs" />
     <Compile Include="Models\MetroMenuResources.cs" />
     <Compile Include="Models\PlugIns\HubCrawlPlugIn.cs" />
-    <Compile Include="Providers\AppProvider.cs" />
-    <Compile Include="Providers\HubCrawlInitializer.cs" />
-    <Compile Include="Providers\HubCrawlProvider.cs" />
-    <Compile Include="Providers\ModuleProvider.cs" />
-    <Compile Include="Providers\PlugInProvider.cs" />
-    <Compile Include="Providers\AddonProvider.cs" />
     <Compile Include="Resources\Template\Selector\AppTileDataTemplateSelector.cs" />
     <Compile Include="ViewModels\HubCrawlViewModel.cs" />
     <Compile Include="ViewModels\Account\LogInViewModel.cs" />
@@ -126,6 +121,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Apps\AppSplash.xaml.cs">
+      <DependentUpon>AppSplash.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HubCrawlView.xaml.cs">
       <DependentUpon>HubCrawlView.xaml</DependentUpon>
@@ -162,6 +160,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Account\LogInView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\AppSplash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,9 +1,9 @@
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Winform.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Winform.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Interface.pdb
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\obj\Debug\HubCrawl.Winform.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\obj\Debug\HubCrawl.Winform.Properties.Resources.resources
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\obj\Debug\HubCrawl.Winform.csproj.GenerateResource.Cache
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\obj\Debug\HubCrawl.Winform.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\obj\Debug\HubCrawl.Winform.pdb
-D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Interface.dll
-D:\Projects\GitHub\HubCrawl\HubCrawl.Winform\bin\Debug\HubCrawl.Interface.pdb

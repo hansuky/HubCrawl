@@ -42,6 +42,8 @@
     <Compile Include="App\AppCluster.cs" />
     <Compile Include="App\AppType.cs" />
     <Compile Include="App\IAppCluster.cs" />
+    <Compile Include="Module\IModuleCluster.cs" />
+    <Compile Include="Module\ModuleCluster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Push\IPushNotifier.cs" />
   </ItemGroup>
@@ -52,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Addon\" />
-    <Folder Include="Module\" />
     <Folder Include="PlugIn\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

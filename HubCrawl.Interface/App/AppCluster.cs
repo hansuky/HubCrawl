@@ -28,6 +28,39 @@ namespace HubCrawl.Interface.App
             this.App = app;
         }
 
-        
+        public void OnStartUp()
+        {
+            if (StartUp != null)
+                StartUp(this, new EventArgs());
+        }
+
+        public event EventHandler StartUp;
+
+        public void OnActivated()
+        {
+            if (Activated != null)
+                Activated(this, new EventArgs());
+        }
+
+        public event EventHandler Activated;
+
+        public void OnDeactivated()
+        {
+            if (Deactivated != null)
+                Deactivated(this, new EventArgs());
+        }
+
+        public event EventHandler Deactivated;
+
+        public virtual void AppCluster_StartUp(object sender, EventArgs e) { }
+        public virtual void AppCluster_Activated(object sender, EventArgs e) { }
+        public virtual void AppCluster_Deactivated(object sender, EventArgs e) { }
+
+        protected void InitializeEvent()
+        {
+            this.StartUp += AppCluster_StartUp;
+            this.Activated += AppCluster_Activated;
+            this.Deactivated += AppCluster_Deactivated;
+        }
     }
 }

@@ -1,21 +1,10 @@
 ﻿using HubCrawl.Models.Apps;
 using HubCrawl.Resources.Template.Selector;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace HubCrawl.Controls
 {
@@ -47,7 +36,7 @@ namespace HubCrawl.Controls
             ObservableCollection<PanoramaGroup> appGroupCollection = new ObservableCollection<PanoramaGroup>();
             foreach (var group in appGroups)
             {
-                appGroupCollection.Add(new PanoramaGroup(group.Key, CollectionViewSource.GetDefaultView(group)));
+                appGroupCollection.Add(new AppPanoramaGroup(group.Key, CollectionViewSource.GetDefaultView(group)));
             }
             appPanorama.Panorama.SetBinding(Panorama.ItemsSourceProperty, new Binding() { Source = appGroupCollection });
         }

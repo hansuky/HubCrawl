@@ -1,9 +1,9 @@
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.WPF.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.WPF.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.Interface.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.Interface.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.Properties.Resources.resources
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.csproj.GenerateResource.Cache
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.pdb
-D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\obj\Debug\HubCrawl.WPF.csprojResolveAssemblyReference.cache
-D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.Interface.dll
-D:\Projects\GitHub\HubCrawl\HubCrawl.WPF\bin\Debug\HubCrawl.Interface.pdb

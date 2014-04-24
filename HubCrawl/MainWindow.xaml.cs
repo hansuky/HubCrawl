@@ -1,26 +1,14 @@
-﻿using HubCrawl.Helpers;
+﻿using HubCrawl.Core;
 using HubCrawl.Interface.App;
-using HubCrawl.Models.Apps;
+using HubCrawl.Models.Modules;
 using HubCrawl.Views;
+using HubCrawl.Views.Apps;
 using HubCrawl.WPF;
 using MahApps.Metro.Controls;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms.Integration;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml.Serialization;
 
 namespace HubCrawl
 {
@@ -29,47 +17,36 @@ namespace HubCrawl
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        private HubCrawlView _MainView;
+        /// <summary>
+        /// HubCrawl Main View
+        /// </summary>
+        public HubCrawlView MainView
+        {
+            get
+            {
+                if (_MainView == null)
+                {
+                    _MainView = new HubCrawlView();
+                    _MainView.ViewModel.ModuleSelected += ViewModel_ModuleSelected;
+                }
+                return _MainView;
+            }
+        }
+
+        void ViewModel_ModuleSelected(object sender, HubCrawlCluster cluster)
+        {
+            ExecuteModule(cluster as HubCrawlModule);
+        }
+
         public MainWindow()
         {
             InitializeComponent();
-            SetView(new HubCrawlView());
+            SetView(MainView);
+            
             //var logInView = new HubCrawl.Views.Account.LogInView();
             //logInView.Skip += logInView_Skip;
             //SetView(logInView);
-            //TestView();
-        }
-
-        void TestView()
-        {
-            //Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\WpfApplication.dll");
-            Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\WindowsFormsApplication\bin\Debug\WindowsFormsApplication.dll");
-            //Assembly ass = Assembly.LoadFile(@"D:\Projects\GitHub\HubCrawl\BrowserApplication\bin\Debug\BrowserApplication.dll");
-
-            foreach (Type t in ass.GetExportedTypes())
-            {
-                //t.GetInterfaceMap(typeof(HubCrawl.WPF.AppCluster
-                if (t.BaseType == typeof(HubCrawl.WPF.AppCluster))
-                {
-                    HubCrawl.WPF.AppCluster cluster = (HubCrawl.WPF.AppCluster)t.InvokeMember(null,
-                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
-                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
-                    SetView(cluster.App);
-                }
-                else if (t.BaseType == typeof(HubCrawl.Winform.AppCluster))
-                {
-                    HubCrawl.Winform.AppCluster cluster = (HubCrawl.Winform.AppCluster)t.InvokeMember(null,
-                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
-                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
-                    SetView(cluster.App, AppType.Winform);
-                }
-                else if (t.BaseType == typeof(HubCrawl.Browser.AppCluster))
-                {
-                    HubCrawl.Browser.AppCluster cluster = (HubCrawl.Browser.AppCluster)t.InvokeMember(null,
-                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
-                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
-                    SetView(cluster.App, AppType.Browser);
-                }
-            }
         }
 
         void logInView_Skip(object sender, EventArgs e)
@@ -84,23 +61,99 @@ namespace HubCrawl
             SetView(new HubCrawl.Views.HubCrawlView());
         }
 
-        public void SetView(Object view, AppType appType = AppType.WPF)
+        public void SetMainView()
+        {
+            SetView(MainView);
+        }
+
+        public void SetView(Object view)
+        {
+            this.LayoutRoot.Content = view;
+            this.LayoutRoot.ReloadTransition();
+        }
+
+        public void SetModuleView(Object view)
+        {
+            this.MainView.ModuleLayoutRoot.Content = view;
+            this.MainView.ModuleLayoutRoot.ReloadTransition();
+        }
+
+        #region Execution Methods
+
+        public void ExecuteModule(HubCrawlModule module)
+        {
+            String directory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            String loadDllPath = String.Format(@"{0}\{1}", directory, module.FilePath);
+            Assembly ass = Assembly.LoadFile(loadDllPath);
+            foreach (Type t in ass.GetExportedTypes())
+            {
+                if (t.BaseType == typeof(ModuleCluster))
+                {
+                    ModuleCluster cluster = (ModuleCluster)t.InvokeMember(null,
+                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
+                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
+                    SetModuleView(cluster.Module);
+                }
+            }
+        }
+
+        public void ExecuteApp(HubCrawl.Models.Apps.HubCrawlApp app)
+        {
+            String directory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            String loadDllPath = String.Format(@"{0}\{1}", directory, app.FilePath);
+            Assembly ass = Assembly.LoadFile(loadDllPath);
+            foreach (Type t in ass.GetExportedTypes())
+            {
+                if (t.BaseType == typeof(HubCrawl.WPF.AppCluster))
+                {
+                    HubCrawl.WPF.AppCluster cluster = (HubCrawl.WPF.AppCluster)t.InvokeMember(null,
+                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
+                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
+                    ExecuteApp(cluster);
+                    break;
+                }
+                else if (t.BaseType == typeof(HubCrawl.Winform.AppCluster))
+                {
+                    HubCrawl.Winform.AppCluster cluster = (HubCrawl.Winform.AppCluster)t.InvokeMember(null,
+                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
+                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
+                    ExecuteApp(cluster, AppType.Winform);
+                    break;
+                }
+                else if (t.BaseType == typeof(HubCrawl.Browser.AppCluster))
+                {
+                    HubCrawl.Browser.AppCluster cluster = (HubCrawl.Browser.AppCluster)t.InvokeMember(null,
+                        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
+                        BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
+                    ExecuteApp(cluster, AppType.Browser);
+                    break;
+                }
+            }
+        }
+
+        #endregion
+
+        private void ShowSplash<T>(IAppCluster<T> cluster)
+        {
+            AppSplash splash = new AppSplash();
+        }
+
+        protected void ExecuteApp<T>(IAppCluster<T> cluster, AppType appType = AppType.WPF)
         {
             if (appType == AppType.WPF)
             {
-                this.LayoutRoot.Content = view;
-                this.LayoutRoot.ReloadTransition();
+                SetView(cluster.App);
             }
             else if (appType == AppType.Winform)
             {
                 WindowsFormsHost formHost = new WindowsFormsHost();
-                formHost.Child = view as System.Windows.Forms.Control;
+                formHost.Child = cluster.App as System.Windows.Forms.Control;
                 this.LayoutRoot.Content = formHost;
             }
             else if (appType == AppType.Browser)
             {
                 WebBrowser browser = new WebBrowser();
-                browser.Navigate(view.ToString());
+                browser.Navigate(cluster.App.ToString());
                 this.LayoutRoot.Content = browser;
             }
         }

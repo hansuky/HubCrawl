@@ -1,5 +1,5 @@
 D:\Projects\GitHub\HubCrawl\HubCrawl.Core\bin\Debug\HubCrawl.Core.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Core\bin\Debug\HubCrawl.Core.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Core\bin\Debug\Yuhan.Common.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Core\obj\Debug\HubCrawl.Core.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Core\obj\Debug\HubCrawl.Core.pdb
-D:\Projects\GitHub\HubCrawl\HubCrawl.Core\bin\Debug\Yuhan.Common.dll

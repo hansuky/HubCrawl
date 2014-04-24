@@ -1,68 +1,46 @@
-﻿using HubCrawl.Models.Modules;
-using HubCrawl.Providers;
+﻿using HubCrawl.Controls;
+using HubCrawl.Core;
+using HubCrawl.Core.Providers;
+using HubCrawl.Models.Modules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Yuhan.Common.Models;
 
 namespace HubCrawl.Models.Apps
 {
     [Serializable]
-    public class HubCrawlApp : HubCrawlCluster
+    public partial class HubCrawlApp : HubCrawl.Core.Apps.HubCrawlApp, IPanoramaTile
     {
-        private const String DefaultIconPath = "";
-
-        public override string FilePath
+        private System.Windows.Input.ICommand _TileClickedCommand;
+        public System.Windows.Input.ICommand TileClickedCommand
         {
             get
             {
-                AppProvider provider = new AppProvider();
-                return String.Format("{0}/{1}/{2}", provider.DirectoryPath, this.Name, this.ClusterDLLName);
+                if (_TileClickedCommand == null)
+                    _TileClickedCommand = new Yuhan.WPF.Commands.RelayCommand(ExecuteApp);
+                return _TileClickedCommand;
             }
         }
 
-        private String _IconPath;
-
-        public String IconPath
+        public void ExecuteApp()
         {
-            get
-            {
-                if (String.IsNullOrEmpty(_IconPath))
-                {
-                    return DefaultIconPath;
-                }
-                return _IconPath;
-            }
-            set { ChangedPropertyChanged<String>("IconPath", ref _IconPath, ref value); }
+            var window = (App.Current.MainWindow as MainWindow);
+            window.ExecuteApp(this);
         }
 
-        private String _Group;
-        /// <summary>
-        /// Application Group Name
-        /// </summary>
-        public String Group
+        private bool _IsPressed;
+        public bool IsPressed
         {
-            get { return _Group; }
-            set { ChangedPropertyChanged<String>("Group", ref _Group, ref value); }
+            get { return _IsPressed; }
+            set { ChangedPropertyChanged<Boolean>("IsPressed", ref _IsPressed, ref value); }
         }
 
-        private String _Title;
-        /// <summary>
-        /// Application Title
-        /// </summary>
-        public String Title
-        {
-            get
-            {
-                if (String.IsNullOrEmpty(_Title)) _Title = Name;
-                return _Title;
-            }
-            set { ChangedPropertyChanged<String>("Title", ref _Title, ref value); }
-        }
-
-
-        public HubCrawlApp() : base() { }
+        public HubCrawlApp(HubCrawl.Core.Apps.HubCrawlApp app)
+            : base(app)
+        { }
     }
 }

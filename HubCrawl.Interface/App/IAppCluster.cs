@@ -10,5 +10,12 @@ namespace HubCrawl.Interface.App
     {
         AppType AppType { get; }
         T App { get; }
+
+        void OnStartUp();
+        event EventHandler StartUp;
+        void OnActivated();
+        event EventHandler Activated;
+        void OnDeactivated();
+        event EventHandler Deactivated;
     }
 }

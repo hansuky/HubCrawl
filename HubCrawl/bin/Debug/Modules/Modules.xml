@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfHubCrawlModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfHubCrawlModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HubCrawlModule>
+    <Name>Apps</Name>
+    <ClusterDLLName>HubCrawl.Module.Apps.dll</ClusterDLLName>
+    <ImagePathData>M119.9996,0L187.33301,20.667028 187.33301,206.66699 119.33293,226.66699 0,182.00028 120.667,197.77798 120.667,36.444982 40.222468,55.555956 40.222468,165.33381 0,181.99999 0,46.000032z</ImagePathData>
+    <Title>Apps</Title>
+  </HubCrawlModule>
+</ArrayOfHubCrawlModule>

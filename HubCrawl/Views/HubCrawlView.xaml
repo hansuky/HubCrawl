@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.DataContext>
-            <ViewModels:HubCrawlViewModel/>
+            <ViewModels:HubCrawlViewModel x:Name="ViewModel"/>
         </Grid.DataContext>
         <Grid >
             <TextBlock Text="HubCrawl"  FontSize="32" Margin="35, 20"/>
@@ -30,22 +30,32 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <DockPanel Margin="20,0,10,0" >
-                <TextBlock Text="Modules" DockPanel.Dock="Top" FontSize="26" />
-                <ListBox ItemTemplate="{DynamicResource MetroListBoxItemTemplate}" ItemsSource="{Binding Path=AppList.Menu, Mode=OneWay}" DockPanel.Dock="Top"/>
-                <TextBlock Text="Apps" DockPanel.Dock="Top" FontSize="26"/>
-                <ListBox ItemTemplate="{DynamicResource MetroListBoxItemTemplate}" ItemsSource="{Binding Path=AppList.Menu, Mode=OneWay}" DockPanel.Dock="Top"/>
+                <TabControl>
+                    <TabItem Header="Modules">
+                        <ListBox ItemTemplate="{DynamicResource ModuleItemTemplate}" 
+                                 ItemsSource="{Binding Path=Modules, Mode=OneWay}" 
+                                 SelectedItem="{Binding Path=CurrentModule, Mode=TwoWay}"
+                                 DockPanel.Dock="Top"/>
+                    </TabItem>
+                    <TabItem Header="PlugIns">
+                        <ListBox ItemTemplate="{DynamicResource MetroListBoxItemTemplate}" ItemsSource="{Binding Path=AppList.Menu, Mode=OneWay}" DockPanel.Dock="Top"/>        
+                    </TabItem>
+                </TabControl>
+                
             </DockPanel>
-            <DockPanel Grid.Column="1" Margin="15, 0">
-                <Grid DockPanel.Dock="Top">
-                    <TextBox Text="" DockPanel.Dock="Top" metro:TextboxHelper.Watermark="Filter Apps" />
-                </Grid>
-                <Grid>
-                    <Controls:AppPanorama ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>
-                    <!--<Controls:Panorama x:Name="PanoramaApps" 
-                                       DockPanel.Dock="Top" ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>-->
-                    <!--<Controls:Panorama x:Name="Panorama" DockPanel.Dock="Top" Grid.Row="1"/>-->
-                </Grid>
-            </DockPanel>
+            <metro:TransitioningContentControl Grid.Column="1" Margin="15, 0" x:Name="ModuleLayoutRoot">
+                <DockPanel>
+                    <Grid DockPanel.Dock="Top">
+                        <TextBox Text="" DockPanel.Dock="Top" 
+                                 metro:TextboxHelper.Watermark="Filter Apps" 
+                                 metro:TextboxHelper.ClearTextButton="True"/>
+                    </Grid>
+                    <Grid>
+                        <Controls:AppPanorama ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>
+                        <!--<Controls:Panorama x:Name="Panorama" DockPanel.Dock="Top" Grid.Row="1"/>-->
+                    </Grid>
+                </DockPanel>
+            </metro:TransitioningContentControl>
         </Grid>
         <Grid Grid.Row="2" Margin="8">
             

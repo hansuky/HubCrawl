@@ -24,6 +24,11 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
 
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Clean/CleanWindow.xaml" />
+
                 <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Style/HubCrawl.Panorama.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.Panorama.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/HubCrawl;component/Resources/Template/HubCrawl.ListBox.xaml" />

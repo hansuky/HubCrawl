@@ -42,6 +42,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Addons\HubCrawlAddon.cs" />
+    <Compile Include="Apps\HubCrawlApp.cs" />
+    <Compile Include="Apps\HubCrawlAppTileType.cs" />
+    <Compile Include="HubCrawlCluster.cs" />
+    <Compile Include="Modules\HubCrawlModule.cs" />
+    <Compile Include="PlugIns\HubCrawlPlugIn.cs" />
+    <Compile Include="Providers\AddonProvider.cs" />
+    <Compile Include="Providers\AppProvider.cs" />
+    <Compile Include="Providers\HubCrawlInitializer.cs" />
+    <Compile Include="Providers\HubCrawlProvider.cs" />
+    <Compile Include="Providers\ModuleProvider.cs" />
+    <Compile Include="Providers\PlugInProvider.cs" />
     <Compile Include="User\HubCrawlUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

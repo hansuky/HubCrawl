@@ -1,5 +1,5 @@
-﻿using HubCrawl.Models;
-using HubCrawl.Models.Apps;
+﻿using HubCrawl.Core;
+using HubCrawl.Core.Apps;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +11,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using Yuhan.Common.Extensions;
 
-namespace HubCrawl.Providers
+namespace HubCrawl.Core.Providers
 {
     public abstract class HubCrawlProvider<T>
         where T : HubCrawlCluster

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\GitHub\HubCrawl\HubCrawl\App.xaml
-10117412160
+11-241511190
 
-441110394046
+40579644432
 261151459997
-Controls\AppPanorama.xaml;Controls\ConsoleControl.xaml;MainWindow.xaml;Resources\HubCrawl.xaml;Resources\Style\HubCrawl.Panorama.xaml;Resources\Template\HubCrawl.ListBox.xaml;Resources\Template\HubCrawl.Panorama.xaml;Views\Account\LogInView.xaml;Views\HubCrawlView.xaml;Views\InitializationView.xaml;
+Controls\AppPanorama.xaml;Controls\ConsoleControl.xaml;MainWindow.xaml;Resources\HubCrawl.xaml;Resources\Style\HubCrawl.Panorama.xaml;Resources\Template\HubCrawl.ListBox.xaml;Resources\Template\HubCrawl.Panorama.xaml;Views\Account\LogInView.xaml;Views\Apps\AppSplash.xaml;Views\HubCrawlView.xaml;Views\InitializationView.xaml;
 
-False
+True
 

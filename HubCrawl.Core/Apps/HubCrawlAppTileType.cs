@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HubCrawl.Controls
+namespace HubCrawl.Core.Apps
 {
-    public enum PanoramaTileType
+    public enum HubCrawlAppTileType
     {
         [Description("Single Tile")]
         Single,

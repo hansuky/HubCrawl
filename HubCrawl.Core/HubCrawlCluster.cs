@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Yuhan.Common.Models;
 
-namespace HubCrawl.Models
+namespace HubCrawl.Core
 {
     [Serializable]
     public abstract class HubCrawlCluster : NotifyPropertyChangedBase
@@ -47,5 +47,12 @@ namespace HubCrawl.Models
 
 
         public HubCrawlCluster() : base() { }
+
+        public HubCrawlCluster(HubCrawlCluster cluster)
+            :base()
+        {
+            this.ClusterDLLName = cluster.ClusterDLLName;
+            this.Name = cluster.Name;
+        }
     }
 }

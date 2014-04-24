@@ -96,9 +96,13 @@ namespace HubCrawl.Controls
 
 		protected override void OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)
 		{
-			base.OnVisualChildrenChanged(visualAdded, visualRemoved);
-			_itemWidthSpanChangeNotifier = null;
-			this.ArrangeChildren();
+            try
+            {
+                base.OnVisualChildrenChanged(visualAdded, visualRemoved);
+                _itemWidthSpanChangeNotifier = null;
+                this.ArrangeChildren();
+            }
+            catch { }
 		}
 
 		#endregion

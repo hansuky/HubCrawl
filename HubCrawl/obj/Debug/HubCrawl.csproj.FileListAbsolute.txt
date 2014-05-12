@@ -23,10 +23,8 @@ D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.csprojResolveAssemblyRef
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Controls\ConsoleControl.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\MainWindow.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Resources\HubCrawl.baml
-D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Resources\Template\HubCrawl.ListBox.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\InitializationView.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\App.baml
-D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Controls\AppPanorama.g.cs
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Controls\ConsoleControl.g.cs
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\MainWindow.g.cs
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Account\LogInView.g.cs
@@ -36,9 +34,6 @@ D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\App.g.cs
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl_MarkupCompile.cache
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl_MarkupCompile.lref
-D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Controls\AppPanorama.baml
-D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Resources\Style\HubCrawl.Panorama.baml
-D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Resources\Template\HubCrawl.Panorama.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Account\LogInView.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\HubCrawlView.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.g.resources
@@ -48,3 +43,5 @@ D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.exe
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.pdb
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Apps\AppSplash.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Apps\AppSplash.g.cs
+D:\Projects\GitHub\HubCrawl\HubCrawl\bin\Debug\HubCrawl.Module.Apps.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl\bin\Debug\HubCrawl.Module.Apps.pdb

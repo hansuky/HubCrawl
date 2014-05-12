@@ -13,3 +13,4 @@ D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.Properties.R
 D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.csproj.GenerateResource.Cache
 D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.dll
 D:\Projects\GitHub\HubCrawl\WpfApplication\obj\Debug\WpfApplication.pdb
+D:\Projects\GitHub\HubCrawl\WpfApplication\bin\Debug\Yuhan.Common.dll

@@ -79,21 +79,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\AppPanorama.xaml.cs">
-      <DependentUpon>AppPanorama.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AppPanoramaGroup.cs" />
     <Compile Include="Controls\ConsoleControl.xaml.cs">
       <DependentUpon>ConsoleControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\GridPanel.cs" />
-    <Compile Include="Controls\Panorama\IPanoramaTile.cs" />
-    <Compile Include="Controls\Panorama\Panorama.cs" />
-    <Compile Include="Controls\Panorama\PanoramaGroup.cs" />
     <Compile Include="Converters\PanoramaGroupWidthConverter.cs" />
     <Compile Include="Commands\SimpleCommand.cs" />
     <Compile Include="Converters\StringToPathConverter.cs" />
     <Compile Include="Events\HubCrawlClusterEventArgs.cs" />
+    <Compile Include="Helpers\HubCrawlExecuter.cs" />
     <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="Helpers\NavigationService.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -101,13 +95,14 @@
     </Compile>
     <Compile Include="Models\Account\LogInResult.cs" />
     <Compile Include="Models\Addons\HubCrawlAddon.cs" />
-    <Compile Include="Models\Apps\HubCrawlApp.cs" />
+    <Compile Include="Models\Apps\HubCrawlApp.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Modules\HubCrawlModule.cs" />
     <Compile Include="Models\MetroMenu.cs" />
     <Compile Include="Models\MetroMenuItem.cs" />
     <Compile Include="Models\MetroMenuResources.cs" />
     <Compile Include="Models\PlugIns\HubCrawlPlugIn.cs" />
-    <Compile Include="Resources\Template\Selector\AppTileDataTemplateSelector.cs" />
     <Compile Include="ViewModels\HubCrawlViewModel.cs" />
     <Compile Include="ViewModels\Account\LogInViewModel.cs" />
     <Compile Include="ViewModels\Sample\MainWindowViewModel.cs" />
@@ -131,10 +126,6 @@
     <Compile Include="Views\InitializationView.xaml.cs">
       <DependentUpon>InitializationView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\AppPanorama.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\ConsoleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,18 +137,6 @@
     <Page Include="Resources\HubCrawl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resources\Style\HubCrawl.Panorama.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\Template\HubCrawl.ListBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resources\Template\HubCrawl.Panorama.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Account\LogInView.xaml">
       <SubType>Designer</SubType>
@@ -233,6 +212,10 @@
     <ProjectReference Include="..\HubCrawl.Interface\HubCrawl.Interface.csproj">
       <Project>{436e4969-89c3-4d69-8eda-3086a9565704}</Project>
       <Name>HubCrawl.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HubCrawl.Module.Apps\HubCrawl.Module.Apps.csproj">
+      <Project>{1cffdc75-5fac-4510-8308-47fd36d393f9}</Project>
+      <Name>HubCrawl.Module.Apps</Name>
     </ProjectReference>
     <ProjectReference Include="..\HubCrawl.Winform\HubCrawl.Winform.csproj">
       <Project>{b09b702f-e9b0-4148-956d-c0ffb741e81d}</Project>

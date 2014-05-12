@@ -53,6 +53,7 @@ namespace HubCrawl.Core
         {
             this.ClusterDLLName = cluster.ClusterDLLName;
             this.Name = cluster.Name;
+            this.Version = cluster.Version;
         }
     }
 }

@@ -43,19 +43,7 @@
                 </TabControl>
                 
             </DockPanel>
-            <metro:TransitioningContentControl Grid.Column="1" Margin="15, 0" x:Name="ModuleLayoutRoot">
-                <DockPanel>
-                    <Grid DockPanel.Dock="Top">
-                        <TextBox Text="" DockPanel.Dock="Top" 
-                                 metro:TextboxHelper.Watermark="Filter Apps" 
-                                 metro:TextboxHelper.ClearTextButton="True"/>
-                    </Grid>
-                    <Grid>
-                        <Controls:AppPanorama ItemsSource="{Binding Path=Apps, Mode=TwoWay}"/>
-                        <!--<Controls:Panorama x:Name="Panorama" DockPanel.Dock="Top" Grid.Row="1"/>-->
-                    </Grid>
-                </DockPanel>
-            </metro:TransitioningContentControl>
+            <metro:TransitioningContentControl Grid.Column="1" Margin="15, 0" x:Name="ModuleLayoutRoot" />
         </Grid>
         <Grid Grid.Row="2" Margin="8">
             

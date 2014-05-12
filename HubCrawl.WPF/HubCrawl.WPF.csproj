@@ -50,9 +50,23 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Yuhan.Common">
+      <HintPath>..\packages\Yuhan.Common.1.5.3\lib\Yuhan.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yuhan.WPF">
+      <HintPath>..\packages\Yuhan.WPF.1.4.2.0\lib\Yuhan.WPF.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCluster.cs" />
+    <Compile Include="Commands\SimpleCommand.cs" />
+    <Compile Include="Controls\GridPanel.cs" />
+    <Compile Include="Controls\Panorama\IPanoramaTile.cs" />
+    <Compile Include="Controls\Panorama\Panorama.cs" />
+    <Compile Include="Controls\Panorama\PanoramaGroup.cs" />
+    <Compile Include="Converters\PanoramaGroupWidthConverter.cs" />
+    <Compile Include="Converters\StringToPathConverter.cs" />
+    <Compile Include="Helpers\TreeHelper.cs" />
     <Compile Include="ModuleCluster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -67,10 +81,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Services\MessageBoxService.cs" />
+    <Compile Include="ViewModels\PanoramaTileViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +99,29 @@
       <Project>{436e4969-89c3-4d69-8eda-3086a9565704}</Project>
       <Name>HubCrawl.Interface</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\HubCrawl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Style\HubCrawl.Panorama.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Template\HubCrawl.ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Template\HubCrawl.Panorama.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\App\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

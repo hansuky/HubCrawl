@@ -9,12 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using HubCrawl.Controls;
-using HubCrawl.Converters;
-using HubCrawl.Models.Apps;
-using HubCrawl.ViewModels;
 using HubCrawl.ViewModels.Account;
-using MahApps.Metro.Controls;
 using System;
 using System.Diagnostics;
 using System.Windows;

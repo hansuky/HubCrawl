@@ -2,6 +2,7 @@
 using HubCrawl.Core;
 using HubCrawl.Core.Providers;
 using HubCrawl.Models.Modules;
+using HubCrawl.WPF.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;

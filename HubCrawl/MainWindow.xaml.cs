@@ -1,4 +1,6 @@
 ﻿using HubCrawl.Core;
+using HubCrawl.Core.Apps;
+using HubCrawl.Core.Executer;
 using HubCrawl.Interface.App;
 using HubCrawl.Models.Modules;
 using HubCrawl.Views;
@@ -9,13 +11,14 @@ using System;
 using System.Reflection;
 using System.Windows.Controls;
 using System.Windows.Forms.Integration;
+using System.Linq;
 
 namespace HubCrawl
 {
     /// <summary>
     /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow : MetroWindow, IAppExecuter
     {
         private HubCrawlView _MainView;
         /// <summary>
@@ -92,12 +95,19 @@ namespace HubCrawl
                     ModuleCluster cluster = (ModuleCluster)t.InvokeMember(null,
                         BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
                         BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
+
+                    var appExecuters = cluster.GetType().GetProperties().Where(c => c.PropertyType == typeof(HubCrawl.Core.Executer.IAppExecuter));
+                    foreach (var executer in appExecuters)
+                    {
+                        cluster.GetType().GetProperty(executer.Name).SetValue(cluster, this as IAppExecuter);
+                    }
+
                     SetModuleView(cluster.Module);
                 }
             }
         }
 
-        public void ExecuteApp(HubCrawl.Models.Apps.HubCrawlApp app)
+        public void ExecuteApp(HubCrawlApp app)
         {
             String directory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             String loadDllPath = String.Format(@"{0}\{1}", directory, app.FilePath);
@@ -110,6 +120,7 @@ namespace HubCrawl
                         BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic |
                         BindingFlags.Instance | BindingFlags.CreateInstance, null, null, null);
                     ExecuteApp(cluster);
+                    
                     break;
                 }
                 else if (t.BaseType == typeof(HubCrawl.Winform.AppCluster))

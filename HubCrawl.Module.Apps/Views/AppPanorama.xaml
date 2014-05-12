@@ -3,9 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel="clr-namespace:HubCrawl.Module.Apps.ViewModels"
+             xmlns:control="clr-namespace:HubCrawl.WPF.Controls;assembly=HubCrawl.WPF"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HubCrawl.WPF;component/Resources/Style/HubCrawl.Panorama.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HubCrawl.WPF;component/Resources/Template/HubCrawl.Panorama.xaml" />
+                <ResourceDictionary Source="/HubCrawl.Module.Apps;component/Resources/AppPanorama.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
-        <TextBlock Text="Panorama" />
+        <Grid.DataContext>
+            <viewModel:AppViewModel x:Name="ViewModel" />
+        </Grid.DataContext>
+        <DockPanel>
+            <Grid DockPanel.Dock="Top">
+                <TextBox Text="" DockPanel.Dock="Top" 
+                                 metro:TextboxHelper.Watermark="Filter Apps" 
+                                 metro:TextboxHelper.ClearTextButton="True"/>
+            </Grid>
+            <control:Panorama x:Name="PanoramaControl" />
+        </DockPanel>
+        
     </Grid>
 </UserControl>

@@ -9,6 +9,7 @@ using HubCrawl.Controls;
 using HubCrawl.Services;
 using Yuhan.Common.Models;
 using HubCrawl.ViewModels;
+using HubCrawl.WPF.Controls;
 
 namespace HubCrawl.ViewModels.Sample
 {
@@ -125,9 +126,9 @@ namespace HubCrawl.ViewModels.Sample
         }
 
 
-        private IEnumerable<HubCrawl.Controls.PanoramaGroup> panoramaItems;
+        private IEnumerable<PanoramaGroup> panoramaItems;
 
-        public IEnumerable<HubCrawl.Controls.PanoramaGroup> PanoramaItems
+        public IEnumerable<PanoramaGroup> PanoramaItems
         {
             get { return this.panoramaItems; }
 

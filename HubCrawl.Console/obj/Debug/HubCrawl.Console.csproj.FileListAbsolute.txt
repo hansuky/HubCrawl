@@ -2,6 +2,6 @@ D:\Projects\GitHub\HubCrawl\HubCrawl.Console\bin\Debug\HubCrawl.Console.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Console\bin\Debug\HubCrawl.Console.pdb
 D:\Projects\GitHub\HubCrawl\HubCrawl.Console\bin\Debug\HubCrawl.Interface.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Console\bin\Debug\HubCrawl.Interface.pdb
-D:\Projects\GitHub\HubCrawl\HubCrawl.Console\obj\Debug\HubCrawl.Console.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\HubCrawl\HubCrawl.Console\obj\Debug\HubCrawl.Console.dll
 D:\Projects\GitHub\HubCrawl\HubCrawl.Console\obj\Debug\HubCrawl.Console.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Console\obj\Debug\HubCrawl.Console.csprojResolveAssemblyReference.cache

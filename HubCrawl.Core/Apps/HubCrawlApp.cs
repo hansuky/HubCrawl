@@ -10,7 +10,7 @@ using Yuhan.Common.Models;
 namespace HubCrawl.Core.Apps
 {
     [Serializable]
-    public class HubCrawlApp : HubCrawlCluster
+    public class HubCrawlApp : HubCrawlCluster, ICloneable
     {
         private const String DefaultIconPath = "";
 
@@ -92,7 +92,11 @@ namespace HubCrawl.Core.Apps
             this.IconPath = app.IconPath;
             this.TileType = app.TileType;
             this.Title = app.Title;
-            this.Version = app.Version;
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
     }
 }

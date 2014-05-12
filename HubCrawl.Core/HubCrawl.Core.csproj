@@ -45,6 +45,7 @@
     <Compile Include="Addons\HubCrawlAddon.cs" />
     <Compile Include="Apps\HubCrawlApp.cs" />
     <Compile Include="Apps\HubCrawlAppTileType.cs" />
+    <Compile Include="Executer\IAppExecuter.cs" />
     <Compile Include="HubCrawlCluster.cs" />
     <Compile Include="Modules\HubCrawlModule.cs" />
     <Compile Include="PlugIns\HubCrawlPlugIn.cs" />

@@ -13,7 +13,7 @@ using HubCrawl.Services;
 
 namespace HubCrawl.ViewModels
 {
-    public class PanoramaTileViewModel : NotifyPropertyChangedBase, HubCrawl.Controls.IPanoramaTile
+    public class PanoramaTileViewModel : NotifyPropertyChangedBase, HubCrawl.WPF.Controls.IPanoramaTile
     {
         private IMessageBoxService messageBoxService;
         private Timer liveUpdateTileTimer = new Timer();

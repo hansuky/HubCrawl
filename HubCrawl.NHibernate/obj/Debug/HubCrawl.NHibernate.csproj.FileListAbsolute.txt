@@ -1,0 +1,13 @@
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\HubCrawl.NHibernate.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\HubCrawl.NHibernate.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\FluentNHibernate.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\HubCrawl.Data.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\Iesi.Collections.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\NHibernate.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\HubCrawl.Data.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\FluentNHibernate.xml
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\Iesi.Collections.xml
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\bin\Debug\NHibernate.xml
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\obj\Debug\HubCrawl.NHibernate.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\obj\Debug\HubCrawl.NHibernate.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.NHibernate\obj\Debug\HubCrawl.NHibernate.pdb

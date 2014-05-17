@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="HubCrawl.Data" namespace="HubCrawl.Data" p1:Guid="7c5c0d0b-7afd-44df-8146-b56c69bfeaa0" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="$EnumTypes">
+    <EnumType Name="Gender" class="Gender" p1:Guid="ac4a1796-8565-4e17-b404-7bf917940462">
+      <Member Name="Male" Value="1" p1:Guid="c34e66e4-a254-43c1-9229-97288dcb9122" />
+      <Member Name="Female" Value="2" p1:Guid="1c565bb4-e161-4b8e-8198-e5580f9744b0" />
+    </EnumType>
+  </class>
+  <class name="UserProfile" table="UserProfile" p1:Guid="45cf404e-67e6-48fb-8c69-dcd0ed5703d3">
+    <id name="UserID" type="String" p1:ValidateRequired="True" p1:Guid="62f0bcc8-cc2e-4c18-af1c-ae159ca4e512">
+      <column name="" />
+    </id>
+    <property name="FirstName" type="String" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="89cab8b9-d1bc-414b-958b-9d6621648f07">
+      <column name="" />
+    </property>
+    <property name="LastName" type="String" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="b2838f1a-e2ee-440f-badb-8dd52d73b15f">
+      <column name="" />
+    </property>
+    <property name="PhoneNumber" type="String" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="97234687-dfab-4632-8c1e-78c1a748156d">
+      <column name="" />
+    </property>
+    <property name="Email" type="String" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="ee616138-b88a-45de-b5c7-13682d022b91">
+      <column name="" />
+    </property>
+    <one-to-one name="MemberShip" class="MemberShip" constrained="true" p1:AssociationGuid="245f0d2a-5b1c-40f1-b4be-24f95fcfb3dc" p1:Guid="926c089c-ff4f-4b5b-add5-af6c926de852" />
+    <set name="Roles" table="UserInRole" inverse="true" generic="true" p1:AssociationGuid="b5b0f08b-dd62-46a5-828e-20bfa429faa0" p1:Guid="81646bc6-12e8-42f8-9f3b-0deb40b80998">
+      <key>
+        <column name="" />
+      </key>
+      <many-to-many class="Role" fetch="join">
+        <column name="" />
+      </many-to-many>
+    </set>
+  </class>
+  <class name="Role" table="Role" p1:Guid="4a1a9b32-cee7-4f46-ad4a-3294354177d4">
+    <id name="RoleID" type="Int32" p1:ValidateRequired="True" p1:Guid="96dda0ab-6ae2-496d-b421-00fd23584103">
+      <column name="" />
+    </id>
+    <property name="RoleName" type="String" p1:ValidateRequired="True" p1:Guid="f0cc4cc0-aa75-412a-9a32-525266194f55">
+      <column name="" />
+    </property>
+    <set name="UserProfiles" table="UserInRole" generic="true" p1:AssociationGuid="b5b0f08b-dd62-46a5-828e-20bfa429faa0" p1:Guid="ea561f68-b767-44f2-81bf-36d0836ac61c">
+      <key>
+        <column name="" />
+      </key>
+      <many-to-many class="UserProfile" fetch="join">
+        <column name="" />
+      </many-to-many>
+    </set>
+  </class>
+  <class name="MemberShip" table="MemberShip" p1:Guid="82d9fb2a-3af9-4cf5-bd31-24c09d54c886">
+    <id name="UserID" type="String" p1:ValidateRequired="True" p1:Guid="f672ebb4-3d1f-47ab-814f-63e08f677e3f">
+      <column name="" />
+    </id>
+    <property name="CreateDate" type="DateTime" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="8e38fb0a-ff43-41d7-a7d2-1ec0065845b8">
+      <column name="" />
+    </property>
+    <property name="ConfirmationToken" type="String" p1:nullable="true" p1:ValidateMaxLength="128" p1:ValidateRequired="False" p1:Guid="0b36564a-8182-49ab-8a63-90d26980148f">
+      <column name="" length="128" />
+    </property>
+    <property name="IsConfirmed" type="Boolean" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="75a3f5b4-6c27-4853-8755-267d0ab3b346">
+      <column name="" />
+    </property>
+    <property name="LastPasswordFailureDate" type="DateTime" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="efb9ee8d-548f-443c-a510-0733939b129c">
+      <column name="" />
+    </property>
+    <property name="PasswordFailuresSinceLastSuccess" type="Int32" p1:ValidateRequired="True" p1:Guid="6d6ba5f4-d1ea-45cc-8c5b-8664d4c27256">
+      <column name="" default="0" />
+    </property>
+    <property name="Password" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="True" p1:Guid="39488e13-ee99-44fa-b23e-434003a09005">
+      <column name="" length="128" p1:fixed-length="true" />
+    </property>
+    <property name="PasswordChangedDate" type="DateTime" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="c29c1679-2f71-4f11-97d7-a568815cf1cb">
+      <column name="" />
+    </property>
+    <property name="PasswordSalt" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="True" p1:Guid="05d22d26-7f47-4d26-81cb-cce53ee7212f">
+      <column name="" length="128" />
+    </property>
+    <property name="PasswordVerificationToken" type="String" p1:nullable="true" p1:ValidateMaxLength="128" p1:ValidateRequired="False" p1:Guid="9aabefb2-8456-45ef-bbc7-adf7e4bdf492">
+      <column name="" length="128" />
+    </property>
+    <property name="PasswordVerificationTokenExpirationDate" type="DateTime" p1:nullable="true" p1:ValidateRequired="False" p1:Guid="ce9f0c19-14bd-4d80-afff-6c08a25a371f">
+      <column name="" />
+    </property>
+    <one-to-one name="UserProfile" class="UserProfile" p1:AssociationGuid="245f0d2a-5b1c-40f1-b4be-24f95fcfb3dc" p1:Guid="93f4cf2c-38f6-4f4d-a87e-9ad982a6dce4" />
+  </class>
+  <class name="App" table="" p1:Guid="77f380ae-3f98-46e0-8b41-e371eaf91c7d">
+    <id name="AppID" type="Guid" p1:ValidateRequired="True" p1:Guid="8fe58fd8-a33f-423c-adb7-baff67a1e513">
+      <column name="" />
+    </id>
+    <version name="Version" type="Int32" p1:ValidateRequired="True" p1:Guid="8ede336b-f577-4af4-8a76-0316b5b689eb">
+      <column name="" />
+    </version>
+    <property name="Title" type="String" p1:ValidateRequired="True" p1:Guid="83368ce1-5f0a-4f39-993a-5bf0f4aec6a9">
+      <column name="" />
+    </property>
+  </class>
+</hibernate-mapping>

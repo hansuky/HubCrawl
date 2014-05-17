@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5472B4D-26DC-433F-85A7-8B32C2A5BBA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HubCrawl.NHibernate</RootNamespace>
+    <AssemblyName>HubCrawl.NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Connector.cs" />
+    <Compile Include="NHibernateHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataModel.Diagram1.view">
+      <DependentUpon>DataModel.hbml</DependentUpon>
+    </None>
+    <None Include="DataModel.edps">
+      <DependentUpon>DataModel.hbml</DependentUpon>
+    </None>
+    <None Include="DataModel.hbml">
+      <Generator>DevartHibernateGenerator</Generator>
+      <LastGenOutput>DataModel.info</LastGenOutput>
+    </None>
+    <None Include="DataModel.info">
+      <DependentUpon>DataModel.hbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HubCrawl.Data\HubCrawl.Data.csproj">
+      <Project>{bc7d6786-b555-4b8e-adf2-bb016b7f2eb3}</Project>
+      <Name>HubCrawl.Data %28HubCrawl.Data\HubCrawl.Data%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\FireBird.cfg.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configuration\MSSQL.cfg.xml" />
+    <Content Include="Configuration\MySql.cfg.xml" />
+    <Content Include="Configuration\Oracle.cfg.xml" />
+    <Content Include="Configuration\PostgreSQL.cfg.xml" />
+    <Content Include="Configuration\SQLite.cfg.xml" />
+    <Content Include="Configuration\SybaseASE.cfg.xml" />
+    <Content Include="Configuration\SybaseSQLAnywhere.cfg.xml" />
+    <EmbeddedResource Include="Mappers\DataModel.App.hbm.xml" />
+    <EmbeddedResource Include="Mappers\DataModel.MemberShip.hbm.xml" />
+    <EmbeddedResource Include="Mappers\DataModel.Role.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Mappers\DataModel.UserProfile.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

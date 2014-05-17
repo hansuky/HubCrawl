@@ -213,10 +213,6 @@
       <Project>{436e4969-89c3-4d69-8eda-3086a9565704}</Project>
       <Name>HubCrawl.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HubCrawl.Module.Apps\HubCrawl.Module.Apps.csproj">
-      <Project>{1cffdc75-5fac-4510-8308-47fd36d393f9}</Project>
-      <Name>HubCrawl.Module.Apps</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HubCrawl.Winform\HubCrawl.Winform.csproj">
       <Project>{b09b702f-e9b0-4148-956d-c0ffb741e81d}</Project>
       <Name>HubCrawl.Winform</Name>

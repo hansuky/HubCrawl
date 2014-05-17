@@ -43,5 +43,3 @@ D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.exe
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\HubCrawl.pdb
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Apps\AppSplash.baml
 D:\Projects\GitHub\HubCrawl\HubCrawl\obj\Debug\Views\Apps\AppSplash.g.cs
-D:\Projects\GitHub\HubCrawl\HubCrawl\bin\Debug\HubCrawl.Module.Apps.dll
-D:\Projects\GitHub\HubCrawl\HubCrawl\bin\Debug\HubCrawl.Module.Apps.pdb

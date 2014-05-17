@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="HubCrawl.Data" namespace="HubCrawl.Data" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="UserProfile" table="UserProfile">
+    <id name="UserID" type="String">
+      <column name="UserID" not-null="true" />
+      <generator class="assigned" />
+    </id>
+    <property name="FirstName" type="String">
+      <column name="FirstName" not-null="false" />
+    </property>
+    <property name="LastName" type="String">
+      <column name="LastName" not-null="false" />
+    </property>
+    <property name="PhoneNumber" type="String">
+      <column name="PhoneNumber" not-null="false" />
+    </property>
+    <property name="Email" type="String">
+      <column name="Email" not-null="false" />
+    </property>
+    <one-to-one name="MemberShip" class="MemberShip" constrained="true" />
+    <set name="Roles" table="UserInRole" inverse="true" generic="true">
+      <key>
+        <column name="UserID" />
+      </key>
+      <many-to-many class="Role" fetch="join">
+        <column name="RoleID" />
+      </many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

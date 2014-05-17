@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="HubCrawl.Data" namespace="HubCrawl.Data" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="MemberShip" table="MemberShip">
+    <id name="UserID" type="String">
+      <column name="UserID" not-null="true" />
+      <generator class="assigned" />
+    </id>
+    <property name="CreateDate" type="DateTime">
+      <column name="CreateDate" not-null="false" />
+    </property>
+    <property name="ConfirmationToken" type="String">
+      <column name="ConfirmationToken" not-null="false" length="128" />
+    </property>
+    <property name="IsConfirmed" type="Boolean">
+      <column name="IsConfirmed" not-null="false" />
+    </property>
+    <property name="LastPasswordFailureDate" type="DateTime">
+      <column name="LastPasswordFailureDate" not-null="false" />
+    </property>
+    <property name="PasswordFailuresSinceLastSuccess" type="Int32">
+      <column name="PasswordFailuresSinceLastSuccess" default="0" not-null="true" />
+    </property>
+    <property name="Password" type="String">
+      <column name="Password" not-null="true" length="128" />
+    </property>
+    <property name="PasswordChangedDate" type="DateTime">
+      <column name="PasswordChangedDate" not-null="false" />
+    </property>
+    <property name="PasswordSalt" type="String">
+      <column name="PasswordSalt" not-null="true" length="128" />
+    </property>
+    <property name="PasswordVerificationToken" type="String">
+      <column name="PasswordVerificationToken" not-null="false" length="128" />
+    </property>
+    <property name="PasswordVerificationTokenExpirationDate" type="DateTime">
+      <column name="PasswordVerificationTokenExpirationDate" not-null="false" />
+    </property>
+    <one-to-one name="UserProfile" class="UserProfile" />
+  </class>
+</hibernate-mapping>

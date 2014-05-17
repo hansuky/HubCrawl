@@ -1,0 +1,10 @@
+﻿{
+  "name": "HubCrawl.Node",
+  "version": "0.0.0",
+  "description": "HubCrawl.Node",
+  "main": "app.js",
+  "author": {
+    "name": "Yuhan-ITComm",
+    "email": ""
+  }
+}

@@ -1,0 +1,4 @@
+D:\Projects\GitHub\HubCrawl\HubCrawl.Module.Store\bin\Debug\HubCrawl.Module.Store.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Module.Store\bin\Debug\HubCrawl.Module.Store.pdb
+D:\Projects\GitHub\HubCrawl\HubCrawl.Module.Store\obj\Debug\HubCrawl.Module.Store.dll
+D:\Projects\GitHub\HubCrawl\HubCrawl.Module.Store\obj\Debug\HubCrawl.Module.Store.pdb

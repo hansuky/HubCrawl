@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper Version="5.7.342.0">
+  <ModelSettings xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ConnectionStringInAppConfig="False" TargetFramework="Net45" DetectTPTInheritance="True">
+    <Connection ConnectionString="" Provider="" />
+    <Generation>
+      <GeneratedFiles>
+        <File Name="DataModel.UserProfile.cs" Project="HubCrawl.Data" ProjectFolder="Models" OverwriteMode="None" />
+        <File Name="DataModel.UserProfile.Generated.cs" Project="HubCrawl.Data" ProjectFolder="Models" />
+        <File Name="DataModel.Role.cs" Project="HubCrawl.Data" ProjectFolder="Models" OverwriteMode="None" />
+        <File Name="DataModel.Role.Generated.cs" Project="HubCrawl.Data" ProjectFolder="Models" />
+        <File Name="DataModel.MemberShip.cs" Project="HubCrawl.Data" ProjectFolder="Models" OverwriteMode="None" />
+        <File Name="DataModel.MemberShip.Generated.cs" Project="HubCrawl.Data" ProjectFolder="Models" />
+        <File Name="DataModel.App.cs" Project="HubCrawl.Data" ProjectFolder="Models" OverwriteMode="None" />
+        <File Name="DataModel.App.Generated.cs" Project="HubCrawl.Data" ProjectFolder="Models" />
+        <File Name="DataModel.Gender.cs" Project="HubCrawl.Data" ProjectFolder="Models" />
+        <File Name="DataModel.UserProfile.hbm.xml" Project="HubCrawl.NHibernate" ProjectFolder="Mappers" />
+        <File Name="DataModel.Role.hbm.xml" Project="HubCrawl.NHibernate" ProjectFolder="Mappers" />
+        <File Name="DataModel.MemberShip.hbm.xml" Project="HubCrawl.NHibernate" ProjectFolder="Mappers" />
+        <File Name="DataModel.App.hbm.xml" Project="HubCrawl.NHibernate" ProjectFolder="Mappers" />
+      </GeneratedFiles>
+    </Generation>
+    <generator class="assigned" />
+    <DatabaseFirstNamingRules>
+      <EntitySet PluralizationName="Pluralize" />
+      <Class UseSchemaAsPrefix="False" PluralizeCollectionNavigationPropertyName="True" RemoveUnderscores="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Singularize" />
+      <Property RemoveUnderscores="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+    </DatabaseFirstNamingRules>
+    <ModelFirst StorageSynchronizationEnabled="False">
+      <ModelFirstNamingRules>
+        <Table RemoveUnderscores="False" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Pluralize" />
+        <Column RemoveUnderscores="False" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      </ModelFirstNamingRules>
+    </ModelFirst>
+    <Diagrams>
+      <Diagram Name="Diagram1" DefaultDiagram="True" />
+    </Diagrams>
+    <Templates>
+      <Template Name="HubCrawl" Description="Use this template to generate classes and xml mappings for an NHibernate model." Enabled="True" PredefinedTemplateName="NHibernate C#">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=5.7.342.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>DataAnnotations</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=5.7.342.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </ed:Property>
+        <ed:Property Name="FilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ModelNameAsFilesPrefix" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="EntitiesOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=5.7.342.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project>HubCrawl.Data</Project>
+            <ProjectFolder>Models</ProjectFolder>
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="PropertyChangeNotifiers" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="PropertyChangePartialMethods" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementValidatable" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementEquals" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementCloneable" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDataContracts" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDummyComments" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="XmlMappingOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=5.7.342.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project>HubCrawl.NHibernate</Project>
+            <ProjectFolder>Mappers</ProjectFolder>
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="XmlMappingAction" Type="EntityDeveloper.MetadataArtifactProcessing, EntityDeveloper.Orm.Common, Version=5.7.342.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <MetadataArtifactProcessing>EmbedInOutputAssembly</MetadataArtifactProcessing>
+        </ed:Property>
+        <ed:Property Name="XmlMappingFilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+      </Template>
+    </Templates>
+    <AttributeAssemblies />
+    <Configuration SeparateConfigFile="False" />
+  </ModelSettings>
+</EntityDeveloper>
